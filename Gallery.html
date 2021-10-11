@@ -1,0 +1,161 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuthenticElSalvadorCoffee</title>
+    <link rel="Stylesheet" href="Gallery.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity=
+    "sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+        function validate() {
+          var email = document.getElementById("email").value;
+        
+          var error_message = document.getElementById("error_message");
+        
+          error_message.style.padding = "10px";
+        
+          var text;
+        
+          if (email.indexOf("@") == -1 || email.length < 6) {
+            text = "Please Enter valid Email";
+            error_message.innerHTML = text;
+            return false;
+          }
+        
+          alert("Form Submitted Successfully!");
+          return true;
+        }
+        </script>
+
+  </head>
+</html>
+<body>
+    <header>
+
+<!--header-->
+
+        <div class="container">
+
+<!--branding-->
+
+             <div id="branding">
+                 
+                <h1>Authentic<span class="highlight"> El Salvador Coffee</h1>
+                    
+             </div>
+         
+
+<!--nav-->
+
+         <nav>
+        <ul>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li class="current"><a href="Gallery.html">GALLERY</a></li>
+            <li><a href="ContactUs.html">CONTACT US</a></li>
+            <br>
+            <br>
+            <br>
+            <li><a href="Coffee Process.html">Coffee Process</a> </li>
+            <li><a href="Products.html">Shop</a> </li>
+            <li><a href="SignIn.html">Sign In</a></li>
+
+            <i class="material-icons">&#xe7fd;</i>
+          </ul>
+         </nav>
+     </div>
+    </header>
+
+<!--Galleryphoto-->
+
+
+    <section id="Galleryphoto">
+        <div class="container">
+            <h1>GALLERY</h1>
+           
+        </div>
+    </section>
+<section>
+
+<div class="container2">
+    <div class="heading">
+<h3>Photo <span>Gallery</span></h3>
+    </div>
+
+
+<div class="Case">
+<div class="Dream">
+<img src="Images/EScoffee.jpg">
+<img src="Images/coffee6.jfif">
+<img src="Images/coffee7.jfif">
+<img src="Images/coffee13.jfif">
+<img src="Images/Coffee14.jfif">
+<img src="Images/coffee17.jfif">
+</div>
+
+<div class="Dream">
+    <img src="Images/Coffee42.jpeg">
+    <img src="Images/coffee19.jfif">
+    <img src="Images/coffee20.jfif">
+    <img src="Images/coffee21.jpg">
+    <img src="Images/coffee25.jpg">
+    <img src="Images/coffee29.jfif">
+    </div>
+
+    <div class="Dream">
+        <img src="Images/Coffee3.jpg">
+        <img src="Images/coffee39.jfif">
+        <img src="Images/Coffee32.jpg">
+        <img src="Images/coffee18.jfif">
+        <img src="Images/coffee38.jfif">
+        <img src="Images/coffee35.jfif">
+        </div>
+        
+</div>
+<br>
+
+</section>
+
+<!--newsletter-->
+
+ 
+<section id="newsletter">
+ 
+    <div id="error_message"></div>
+    <h1>SIGN UP NOW</h1>
+    <form action="" id="myform" onsubmit="return validate();">
+      <input type="email" placeholder="Enter your email" id="email" />
+      <button type="submit" class="button_1">Subscribe</button>
+    </form>
+ 
+</section>
+
+<!--footer-->
+    
+    <footer class="footer">
+        
+        <div class="container grid">
+           
+            <div>
+               
+                <h1>AuthenticElSalvadorCoffee</h1>
+                <p> Copyright &copy; 2021</p>
+                
+            </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-twitter fa-x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-x"></i></a>
+                <a href="#"><i class="fab fa-github fa-x"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-x"></i></a>
+            </div>
+        
+        </div>
+    </footer>
+
+  </body>
+</html>

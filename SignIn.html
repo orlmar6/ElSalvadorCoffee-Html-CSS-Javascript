@@ -1,0 +1,211 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuthenticElSalvadorCoffee</title>
+  <link rel="Stylesheet" href="SignIn.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity=
+  "sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--javascript-->
+
+<script type="text/javascript">
+function toggleForm(){
+    section = document.querySelector('section');
+    var container = document.querySelector('.container');
+    container.classList.toggle('active');
+    section.classList.toggle('active');
+}
+
+</script>
+
+
+</script>
+
+<script>
+function checkforblank() {
+var errormessage = "";
+
+if (document.getElementById("fname").value == "") {
+  errormessage += "enter your Username \n";
+  document.getElementById("fname").style.borderColor = "red";
+}
+if (document.getElementById("pass").value == "") {
+  errormessage += "enter your password \n";
+  document.getElementById("pass").style.borderColor = "red";
+}
+if (errormessage != "") {
+  alert(errormessage);
+  return false;
+}
+
+alert("Form Submitted Successfully!");
+  return true;
+}
+
+</script>
+
+<script>
+function validate() {
+  var username = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var confirm = document.getElementById("confirm").value;
+
+  var error_message = document.getElementById("error_message");
+
+  error_message.style.padding = "10px";
+
+  var text;
+
+  if (username.length < 5) {
+  text = "Please enter valid username";
+  error_message.innerHTML = text;
+  return false;
+}
+  if (email.indexOf("@") == -1 || email.length < 6) {
+    text = "Please enter valid email";
+    error_message.innerHTML = text;
+    return false;
+  }
+  if (password.length < 10) {
+  text = "Please enter correct password";
+  error_message.innerHTML = text;
+  return false;
+}
+if (confirm.length < 10) {
+  text = "Please confirm password";
+  error_message.innerHTML = text;
+  return false;
+}
+  alert("Form Submitted Successfully!");
+  return true;
+}
+</script>
+
+</head>
+
+</html>
+<body>
+
+<!--header-->
+
+<header>
+  
+<!--branding-->
+
+     <div id="branding">
+         
+        <h1>Authentic<span class="highlight"> El Salvador Coffee</h1>
+            
+     </div>
+
+ <!--nav-->
+
+ <nav>
+     
+<ul>
+    <li><a href="Home.html">HOME</a></li>
+    <li><a href="About.html">ABOUT</a></li>
+    <li><a href="Gallery.html">GALLERY</a></li>
+    <li></li><a href="ContactUs.html">CONTACT US</a></li>
+    <br>
+    <br>
+    <br>
+    <li><a href="Coffee Process.html">Coffee Process</a> </li>
+    <li><a href="Products.html">Shop</a> </li>
+    <li class="current"><a href="SignIn.html">Sign In</a></li>
+    <i class="material-icons">&#xe7fd;</i>
+  </ul>
+ </nav>
+
+</header>
+
+
+<section>
+  <div class="container">
+      <div class="user signinBx">
+         <div class="imgBx"><img src="images/Coffee32.jpg" alt=""></div>
+           <div class="formBx">
+            
+            <form  action="" id="myform" onsubmit="return checkforblank ()">
+              <div id="errormessage"></div>
+              
+               <h2> Sign In</h2>
+               
+  
+               <input type="text" id="fname" name="fname" placeholder="Username" />
+               <input type="password" id="pass" name="pass" placeholder="Password"/>
+               
+               <button type="submit" class="button-1">Login</button>
+            
+               <p class="signup">Don't have an account? <a href="#" onclick="toggleForm();">Sign up</a></p>
+  
+           </form>
+           </div>
+         </div>
+        
+  <div class="user signupBx">
+    
+         <div class="formBx">
+          
+  
+         <form action="" id="myform" onsubmit="return validate();">
+  
+          <div id="error_message"></div>
+  
+             <h2>Create an account</h2>
+            
+            
+             <input type="username" placeholder="Username" id="username" />
+             <input type="email" placeholder="Enter your email" id="email" />
+             <input type="password" placeholder="Create Password" id="password" />
+             <input type="password" placeholder="Confirm Password" id="confirm" />
+  
+          
+             <button type="submit" class="button_1">Sign Up</button>
+  
+             <p class="signup">Already have an account? <a href="#" onclick="toggleForm();">Sign in</a></p>
+         </form>
+         </div>
+         <div class="imgBx"><img src="images/Coffee44.jpg" alt=""></div>
+       </div>
+      </div>
+     </section>
+
+<!--footer-->
+
+
+<footer class="footer">
+      
+<div class="container grid">
+   
+    <div>
+       
+        <h1>AuthenticElSalvadorCoffee</h1>
+        <p> Copyright &copy; 2021</p>
+        
+    </div>
+    <div class="social">
+        <a href="#"><i class="fab fa-twitter fa-x"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-x"></i></a>
+        <a href="#"><i class="fab fa-github fa-x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-x"></i></a>
+    </div>
+
+</div>
+</footer>
+
+
+</body>
+</html>
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

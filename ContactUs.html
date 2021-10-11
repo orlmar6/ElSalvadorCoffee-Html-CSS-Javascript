@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AuthenticElSalvadorCoffee</title>
+    <link rel="Stylesheet" href="ContactUs.css" />
+
+    <!--Fontawesome CDN link-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity=
+    "sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+
+      function validate() {
+          var name = document.getElementById("name").value;
+          var subject = document.getElementById("subject").value;
+          var phone = document.getElementById("phone").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+          var error_message = document.getElementById("error_message");
+      
+          error_message.style.padding = "10px";
+      
+          var text;
+          if (name.length < 5) {
+            text = "Please Enter valid Name";
+            error_message.innerHTML = text;
+            return false;
+          }
+          if (subject.length < 10) {
+            text = "Please Enter Correct Subject";
+            error_message.innerHTML = text;
+            return false;
+          }
+          if (isNaN(phone) || phone.length != 10) {
+            text = "Please Enter valid Phone Number";
+            error_message.innerHTML = text;
+            return false;
+          }
+          if (email.indexOf("@") == -1 || email.length < 6) {
+            text = "Please Enter valid Email";
+            error_message.innerHTML = text;
+            return false;
+          }
+          if (message.length <= 20) {
+            text = "Please Enter More Than 20";
+            error_message.innerHTML = text;
+            return false;
+          }
+          alert("Form Submitted Successfully!");
+          return true;
+        }
+      
+      
+      </script>
+              
+</head>
+</html>
+<body>
+<!--header-->
+
+    <header>
+        <div class="container">
+
+ <!--branding-->
+
+             <div id="branding">
+                 
+                <h1>Authentic<span class="highlight"> El Salvador Coffee</h1>
+                    
+             </div>
+
+         <!--nav-->
+
+         <nav>
+             
+        <ul>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="Gallery.html">GALLERY</a></li>
+            <li class="current"><a href="ContactUs.html">CONTACT US</a></li>
+            <br>
+            <br>
+            <br>
+            <li><a href="Coffee Process.html">Coffee Process</a> </li>
+            <li><a href="Products.html">Shop</a> </li>
+            <li><a href="SignIn.html">Sign In</a></li>
+            <i class="material-icons">&#xe7fd;</i>
+
+          </ul>
+         </nav>
+     </div>
+    </header>
+
+
+<!--ContactUsphoto-->
+
+
+
+    <section id="ContactUSphoto">
+        <div class="container">
+            <h1>CONTACT US</h1>
+           
+        </div>
+    </section>
+<br>
+<br>
+<!--Contact form-->
+
+
+<section class="section-contact">
+<div class="container1">
+    <div class="content">
+        <div class="left-side">
+            <div class="address details">
+                <i class="material-icons">&#xe55f;</i>
+                <div class="topic">Address</div>
+                <div class="text-one">Km. 4 1/2,</div>
+                <div class="text-two">Ahuachapán, </div>
+                <div class="text-three">El Salvador</div>
+            </div>
+            <div class="phone details">
+                <i class="material-icons">&#xe551;</i>
+                <div class="topic">Phone</div>
+                <div class="text-one">+(503)7150-4573</div>
+                <div class="text-two">+(503)7150-4574</div>
+                
+            </div>
+            <div class="email details">
+                <i class="material-icons">&#xe554;</i>
+                <div class="topic">Email</div>
+                <div class="text-one">elsalvadorcoffee@gmail.com</div>
+                <div class="text-one">info.elsalvadorcoffee@gmail.com</div>
+                
+            </div>
+
+        </div>
+
+        <div class="right-side">
+            <div class="topic-text">GET IN TOUCH WITH US</div>
+
+        
+            <br>
+            <p>Complete the form below to get started</p>
+
+            <div id="error_message"></div>
+            <form action="" id="myform" onsubmit="return validate();">
+              <div class="input-box">
+                <input type="text" placeholder="Name" id="name" />
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Subject" id="subject" />
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Phone" id="phone" />
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Email" id="email" />
+              </div>
+              <div class="input-box">
+                <textarea placeholder="Message" id="message"></textarea>
+              </div>
+              <div class="btn">
+                <input type="submit" value="Submit"  />
+              </div>
+            </form>
+        </div>
+    </div>  
+
+<!--map-->
+
+    <div class="MapPhoto"></div>  
+
+</div>
+</section>
+
+
+<br>
+<br>
+ <!--footerphoto-->
+
+<section id="FooterPhoto2">
+    <div class="container"></div>        
+</section>
+
+
+ <!--footer-->
+
+    <footer class="footer">
+        
+        <div class="container grid">
+           
+            <div>
+               
+                <h1>AuthenticElSalvadorCoffee</h1>
+                <p> Copyright &copy; 2021</p>
+                
+            </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-twitter fa-x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-x"></i></a>
+                <a href="#"><i class="fab fa-github fa-x"></i></a>
+                <a href="#"><i class="fab fa-linkedin fa-x"></i></a>
+            </div>
+        
+        </div>
+    </footer>
+
+
+  </body>
+</html>
+
+
